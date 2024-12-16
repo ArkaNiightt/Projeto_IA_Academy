@@ -6,7 +6,7 @@ credentials:
   usernames:
     joaoaugusto:
       email: joao@git.com
-      failed_login_attempts: 0
+      failed_login_attempts: 3
       first_name: Joao
       last_name: Augusto
       logged_in: false
@@ -17,7 +17,7 @@ credentials:
       - viewer
     victor:
       email: victor@git.com
-      failed_login_attempts: 0
+      failed_login_attempts: 3
       first_name: Victor
       last_name: Bruno
       logged_in: false
