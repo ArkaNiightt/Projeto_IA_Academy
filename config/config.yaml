@@ -1,0 +1,38 @@
+cookie:
+  expiry_days: 30
+  key: some_signature_key
+  name: some_cookie_name
+credentials:
+  usernames:
+    joaoaugusto:
+      email: joao@git.com
+      failed_login_attempts: 0
+      first_name: Joao
+      last_name: Augusto
+      logged_in: false
+      password: $2b$12$UrE9bhV9ns1LGdmzFQJiB.uu.9sb10tC52YwD7AoCtLEb74q.M1ZO
+      roles:
+      - admin
+      - editor
+      - viewer
+    victor:
+      email: victor@git.com
+      failed_login_attempts: 0
+      first_name: Victor
+      last_name: Bruno
+      logged_in: false
+      password: $2b$12$qFhChsbVcrDhsk.osHs3nu4ODmLPLAlvsfi0Fhs9y1ebKLL69AbGi
+      roles:
+      - viewer
+oauth2:
+  google:
+    client_id: null
+    client_secret: null
+    redirect_uri: null
+  microsoft:
+    client_id: null
+    client_secret: null
+    redirect_uri: null
+    tenant_id: null
+pre-authorized:
+  emails: null

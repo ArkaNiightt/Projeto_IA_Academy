@@ -1,0 +1,5 @@
+.streamlit
+.env
+.venv
+__pycache__
+Registrar.py
