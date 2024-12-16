@@ -2,7 +2,7 @@ import yaml
 from yaml.loader import SafeLoader
 import streamlit_authenticator as stauth
 import streamlit as st
-from academy import carregar_modulos
+from academy import carregar_modulos, page_cadastrar
 from database.connection import get_all_data
 
 st.set_page_config(
@@ -46,14 +46,17 @@ def check_user(df):
             authenticator.logout(location="sidebar")
             reset_password()
         if st.session_state["name"] == "Victor Bruno":
-            st.header(f' Bem-vindo **{st.session_state["name"] }** 🦍', divider=True)
+            st.header(
+                f' Bem-vindo **{st.session_state["name"]}** 🦍', divider=True)
         elif st.session_state["name"] == None:
             pass
         elif st.session_state["name"] == "Joao Augusto":
-            st.header(f' Bem-vindo **{st.session_state["name"]}** 👑', divider=True)
+            st.header(
+                f' Bem-vindo **{st.session_state["name"]}** 👑', divider=True)
         else:
-            st.header(f' Bem-vindo **{st.session_state["name"] }** 👋', divider=True)
-            
+            st.header(
+                f' Bem-vindo **{st.session_state["name"]}** 👋', divider=True)
+
         carregar_modulos(df)
     elif st.session_state["authentication_status"] is False:
         st.error("Usuário/senha está incorreto", icon="❌")
