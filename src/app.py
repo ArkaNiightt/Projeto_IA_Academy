@@ -42,22 +42,24 @@ def reset_password():
 
 def check_user(df):
     if st.session_state["authentication_status"]:
-        with st.sidebar:
-            authenticator.logout(location="sidebar")
-            reset_password()
-        if st.session_state["name"] == "Victor Bruno":
-            st.header(
-                f' Bem-vindo **{st.session_state["name"]}** 🦍', divider=True)
-        elif st.session_state["name"] == None:
-            pass
-        elif st.session_state["name"] == "Joao Augusto":
-            st.header(
-                f' Bem-vindo **{st.session_state["name"]}** 👑', divider=True)
-        else:
-            st.header(
-                f' Bem-vindo **{st.session_state["name"]}** 👋', divider=True)
+        with st.spinner("Carregando..."):
+            st.success("Usuário autenticado", icon="✅")
+            with st.sidebar:
+                authenticator.logout(location="sidebar")
+                reset_password()
+            if st.session_state["name"] == "Victor Bruno":
+                st.header(
+                    f' Bem-vindo **{st.session_state["name"]}** 🦍', divider=True)
+            elif st.session_state["name"] == None:
+                pass
+            elif st.session_state["name"] == "Joao Augusto":
+                st.header(
+                    f' Bem-vindo **{st.session_state["name"]}** 👑', divider=True)
+            else:
+                st.header(
+                    f' Bem-vindo **{st.session_state["name"]}** 👋', divider=True)
 
-        carregar_modulos(df)
+            carregar_modulos(df)
     elif st.session_state["authentication_status"] is False:
         st.error("Usuário/senha está incorreto", icon="❌")
     elif st.session_state["authentication_status"] is None:
