@@ -130,3 +130,11 @@ Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## Colaboradores
+```bash
+colab = {
+joao_augusto: "ArkaNiightt",
+victor_bruno: "VictorBrunoAlmeida"
+}
+```
